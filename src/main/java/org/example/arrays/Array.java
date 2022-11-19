@@ -1,8 +1,5 @@
 package org.example.arrays;
 
-import lombok.Getter;
-
-@Getter
 public class Array {
 
     private String[] elements;
@@ -20,6 +17,28 @@ public class Array {
             return true;
         }
         return false;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("[");
+
+        for (int i = 0; i < size - 1; i++) {
+            stringBuilder.append(elements[i]);
+            stringBuilder.append(", ");
+        }
+
+        if (size > 0) {
+            stringBuilder.append(elements[size - 1]);
+        }
+
+        stringBuilder.append("]");
+        return stringBuilder.toString();
     }
 
 }

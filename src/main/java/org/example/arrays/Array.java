@@ -13,4 +13,13 @@ public class Array {
         size = 0;
     }
 
+    public boolean add(String element) {
+        if (size < elements.length) {
+            elements[size] = element;
+            size++;
+            return true;
+        }
+        return false;
+    }
+
 }

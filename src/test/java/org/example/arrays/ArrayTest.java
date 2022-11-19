@@ -15,4 +15,13 @@ class ArrayTest {
         assertEquals(0, arraySize);
     }
 
+    @Test
+    void mustAddAnElementInArray() {
+        Array array = new Array(2);
+
+        array.add("element 1");
+
+        assertEquals(1, array.getSize());
+    }
+
 }

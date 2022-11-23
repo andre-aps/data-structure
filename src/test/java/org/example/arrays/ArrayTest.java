@@ -37,4 +37,13 @@ class ArrayTest {
         assertEquals(arrayExpected, array.toString());
     }
 
+    @Test
+    void mustFindAnElementInArray() {
+        Array array = new Array(10);
+
+        array.add("element 1");
+
+        assertEquals("element 1", array.find(0));
+    }
+
 }

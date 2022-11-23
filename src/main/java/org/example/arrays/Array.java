@@ -23,6 +23,13 @@ public class Array {
         return size;
     }
 
+    public String find(int position) {
+        if (!(position >= 0 && position < size)) {
+            throw new IllegalArgumentException("invalid position");
+        }
+        return elements[position];
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
